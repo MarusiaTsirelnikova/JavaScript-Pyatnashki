@@ -7,7 +7,6 @@ function mixGameBoard () {
     let x = 0;
     let z = 0;
     let counter = 0;
-    let nullstr = 0;
     while (numbers.length != 8) {
         x = Math.floor(Math.random() * 8) + 1;
         if (!numbers.includes(x)) {
@@ -25,16 +24,6 @@ function mixGameBoard () {
 
     z = Math.floor(Math.random() * 8);
     numbers.splice(z, 0, 0);
-
-    if (z >= 0 && z <= 2) {
-        nullstr = 1;
-    }
-    else if (z >= 3 && z <= 5) {
-        nullstr = 2;
-    }
-    else {
-        nullstr = 3;
-    }
 
     if (counter % 2 == 0) {
         drawGameBoard(numbers);
